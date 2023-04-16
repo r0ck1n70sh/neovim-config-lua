@@ -21,3 +21,10 @@ o.expandtab = 2
 
 -- local util = require('util')
 -- util.print_formatted_table{name='vim', table=vim}
+
+-- [[ key map ]] --
+require('key')
+
+
+-- [[ nvim-tree ]] --
+require('nvim-tree').setup()
