@@ -36,9 +36,17 @@ cmd("colorscheme dracula")
 
 
 -- [[ statusline ]] --
- require('lualine').setup({
+require('lualine').setup({
   options = {
     theme = 'dracula-nvim'
   }
+})
+
+
+-- [[ LSP - treesitter ]] --
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'lua', 'vim' },
+  sync_install = true,
+  highlight = { enable = true }
 })
 
