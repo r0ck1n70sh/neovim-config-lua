@@ -1,13 +1,12 @@
 -- [[ path ]] --
 local path = require('path')
 
--- [[ update packpath dir ]] --
--- vim.o.packpath = vim.o.packpath .. ',' .. path.packer_path
--- print('vim.o.packpath', vim.o.packpath)
-
+-- [[ plug ]] --
 require('plug')
 
 local o = vim.o
+local opt = vim.opt
+local cmd = vim.cmd
 
 o.number = true
 o.autoindent = true
@@ -28,5 +27,18 @@ require('key')
 
 -- [[ nvim-tree ]] --
 require('nvim-tree').setup()
--- require('nvim-web-devicons').setup()
 require('nvim-web-devicons').get_icons()
+
+
+-- [[ colorscheme ]] --
+opt.syntax = "ON"
+cmd("colorscheme dracula")
+
+
+-- [[ statusline ]] --
+ require('lualine').setup({
+  options = {
+    theme = 'dracula-nvim'
+  }
+})
+
