@@ -4,5 +4,5 @@ local data_path = vim.fn.stdpath('data')
 return {
 	config_path = config_path,
 	data_path = data_path,
-	packer_path = config_path .. '/after'
+	packer_path = data_path .. '/site/pack'
 }
